@@ -13,7 +13,6 @@ const BuySection = ({addToCart}) => {
     const fetchPhotos = async () => {
         const {data} = await axios.get(localUrl)
         const {photos} = data
-        console.log(photos)
 
         const productDetails = photos.map(photo => ({
             smallImage : photo.src.medium,
