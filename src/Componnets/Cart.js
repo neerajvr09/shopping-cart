@@ -13,6 +13,13 @@ import {
 } from "reactstrap";
 
 const Cart = ({ cartItem, buyNow, removeItem }) => {
+
+    let amount = 0;
+
+    cartItem.forEach(
+        item => amount = parseFloat(amount) + parseFloat(item.productPrice)
+    )
+
   return (
     <Container fluid>
       <h1 className="text-success">Your Cart</h1>
@@ -40,7 +47,7 @@ const Cart = ({ cartItem, buyNow, removeItem }) => {
             <Card className="text-center mt-3">
                 <CardHeader>Grand Total </CardHeader>
                 <CardBody>
-                    Your amount for {cartItem.length} product is : {}
+                    Your amount for {cartItem.length} product is : {amount}
                 </CardBody>
                 <CardFooter>
                     <Button onClick={buyNow} color="success" >
