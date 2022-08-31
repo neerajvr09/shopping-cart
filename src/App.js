@@ -35,7 +35,7 @@ const App = () => {
           <BuySection addToCart={addToCart} />
         </Col>
         <Col md={4}>
-          <Cart buyNow={buyNow} removeItem={removeItem} />
+          <Cart cartItem={cartItem} buyNow={buyNow} removeItem={removeItem} />
         </Col>
       </Row>
     </Container>
